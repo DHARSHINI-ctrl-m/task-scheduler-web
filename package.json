@@ -1,39 +1,51 @@
 {
-  "name": "merge-descriptors",
-  "description": "Merge objects using descriptors",
-  "version": "1.0.3",
+  "name": "safe-buffer",
+  "description": "Safer Node.js Buffer API",
+  "version": "5.2.1",
   "author": {
-    "name": "Jonathan Ong",
-    "email": "me@jongleberry.com",
-    "url": "http://jongleberry.com",
-    "twitter": "https://twitter.com/jongleberry"
+    "name": "Feross Aboukhadijeh",
+    "email": "feross@feross.org",
+    "url": "https://feross.org"
   },
-  "contributors": [
-    "Douglas Christopher Wilson <doug@somethingdoug.com>",
-    "Mike Grabowski <grabbou@gmail.com>"
+  "bugs": {
+    "url": "https://github.com/feross/safe-buffer/issues"
+  },
+  "devDependencies": {
+    "standard": "*",
+    "tape": "^5.0.0"
+  },
+  "homepage": "https://github.com/feross/safe-buffer",
+  "keywords": [
+    "buffer",
+    "buffer allocate",
+    "node security",
+    "safe",
+    "safe-buffer",
+    "security",
+    "uninitialized"
   ],
   "license": "MIT",
-  "repository": "sindresorhus/merge-descriptors",
-  "funding": "https://github.com/sponsors/sindresorhus",
-  "devDependencies": {
-    "eslint": "5.9.0",
-    "eslint-config-standard": "12.0.0",
-    "eslint-plugin-import": "2.14.0",
-    "eslint-plugin-node": "7.0.1",
-    "eslint-plugin-promise": "4.0.1",
-    "eslint-plugin-standard": "4.0.0",
-    "mocha": "5.2.0",
-    "nyc": "13.1.0"
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/feross/safe-buffer.git"
   },
-  "files": [
-    "HISTORY.md",
-    "LICENSE",
-    "README.md",
-    "index.js"
-  ],
   "scripts": {
-    "lint": "eslint .",
-    "test": "mocha test/",
-    "test-cov": "nyc --reporter=html --reporter=text npm test"
-  }
+    "test": "standard && tape test/*.js"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/feross"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/feross"
+    },
+    {
+      "type": "consulting",
+      "url": "https://feross.org/support"
+    }
+  ]
 }
