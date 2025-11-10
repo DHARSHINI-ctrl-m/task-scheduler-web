@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    image: task-scheduler:latest
+    container_name: task-scheduler
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    # uncomment to map local code for development
+    # volumes:
+    #   - ./:/usr/src/app
+    #   - /usr/src/app/node_modules
